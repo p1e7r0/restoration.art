@@ -1,0 +1,102 @@
+/* Hero Section Styles */
+.hero-landscape {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  color: #333;
+  background-color: #fff;
+}
+
+.hero-portrait {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh 100vh;
+  color: #333;
+  background-color: #fff;
+}
+
+.hero-column-1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-title-wrapper {
+  margin: 48px;
+}
+
+/* .hero-title {
+  font-size: 4rem;
+  font-size: 5.4vw;
+  margin-bottom: 32px;
+} */
+
+.hero-title {
+  font-size: calc(1.675rem + 5.1vw);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 32px;
+}
+@media (min-width: 1600px) {
+  .hero-title {
+    font-size: 109px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 70px;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 48px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333; /* Button color, adjust as needed */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #555; /* Adjust hover color as needed */
+  color: #fff;
+}
+
+/* COLUMN 2 */
+
+.hero-column-2 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero-image-to-compare {
+  width: 100%; /* Larghezza al 100% del contenitore */
+  height: 100vh; /* Altezza al 100% del contenitore */
+  object-fit: cover; /* Fai in modo che l'immagine copra sempre tutto il contenitore */
+}
+
+div#first.first.vertical.focused {
+  outline: none;
+  will-change: unset;
+}

@@ -1,0 +1,14 @@
+.portfolio-comparison {
+  height: 100vh; /* Imposta l'altezza desiderata del contenitore */
+  overflow: hidden; /* Nasconde eventuali parti in eccesso dell'immagine */
+  --divider-width: 4px;
+  --divider-color: #fff;
+  --default-handle-opacity: 0;
+  --default-border-width: 0;
+}
+
+.portfolio-image-to-compare {
+  width: 100vw; /* Larghezza al 100% del contenitore */
+  height: 100vh; /* Altezza al 100% del contenitore */
+  object-fit: contain; /* Fai in modo che l'immagine copra sempre tutto il contenitore */
+}

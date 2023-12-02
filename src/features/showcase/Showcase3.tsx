@@ -2,8 +2,8 @@ import "./showcase.css";
 
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
 import { useScrollState } from "../../common/ScrollProvider";
-const beforeImage = "https://restoration.art/compare/1_before.jpg";
-const afterImage = "https://restoration.art/compare/1_after.jpg";
+import beforeImage from "./assets/img20220704_14330085_NONNO_GIUSEPPE_REST_PRIMA.jpg";
+import afterImage from "./assets/img20220704_14330085_NONNO_GIUSEPPE_REST_DOPO.jpg";
 
 const ShowCase3 = () => {
   const section = useScrollState("showcase3", (section, relativeScroll, sectionTop) => {
@@ -38,7 +38,7 @@ const ShowCase3 = () => {
           zIndex: 1,
         }}
       >
-        <ImgComparisonSlider value={(1 - (section?.scroll ?? 0)) * 100} direction={"horizontal"} className="portfolio-comparison" handle={true}>
+        <ImgComparisonSlider value={(1 - (section?.scroll ?? 0)) * 100} direction={"vertical"} className="portfolio-comparison" handle={true}>
           <img slot="first" src={beforeImage} className="portfolio-image-to-compare" />
           <img slot="second" src={afterImage} className="portfolio-image-to-compare" />
         </ImgComparisonSlider>

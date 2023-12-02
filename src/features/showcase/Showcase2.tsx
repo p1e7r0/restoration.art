@@ -2,8 +2,8 @@ import "./showcase.css";
 
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
 import { useScrollState } from "../../common/ScrollProvider";
-import afterImage from "./assets/img20221025_10040785_AFTER.jpg";
-import beforeImage from "./assets/img20221025_10040785_BEFORE.jpg";
+import beforeImage from "./assets/img20221025_10040785_AFTER.jpg";
+import afterImage from "./assets/img20221025_10040785_BEFORE.jpg";
 
 const Showcase2 = () => {
   const section = useScrollState("showcase2", (section, relativeScroll, sectionTop) => {

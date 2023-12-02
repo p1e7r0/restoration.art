@@ -4,7 +4,7 @@ import { useScrollDispatch } from "./ScrollProvider";
 import { Sections } from "./model/Section";
 
 const Container = styled("div")`
-  height: 100vh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
 `;

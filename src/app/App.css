@@ -1,0 +1,50 @@
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.white {
+  color: #000;
+  background-color: #fff;
+}
+
+.black {
+  color: #fff;
+  background-color: #000;
+}
+
+.container {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  width: 100%; /* Imposta la larghezza desiderata del contenitore */
+  height: 100vh; /* Imposta l'altezza desiderata del contenitore */
+  overflow: hidden; /* Nasconde eventuali parti in eccesso dell'immagine */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comparator {
+  width: 100%; /* Imposta la larghezza desiderata del contenitore */
+  height: 100vh; /* Imposta l'altezza desiderata del contenitore */
+  overflow: hidden; /* Nasconde eventuali parti in eccesso dell'immagine */
+  --divider-width: 4px;
+  --divider-color: #fff;
+  --default-handle-opacity: 0;
+  --default-border-width: 0;
+  outline: unset;
+}

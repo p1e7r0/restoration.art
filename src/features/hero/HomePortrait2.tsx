@@ -6,25 +6,19 @@ import after from "./assets/20231103_Portfolio_ragazzo_square_DOPO.jpg";
 import before from "./assets/20231103_Portfolio_ragazzo_square_PRIMA.jpg";
 
 const HomePortrait2 = () => {
-  const section = useScrollState("hero", (section, relativeScroll, sectionTop) => {
+  const section = useScrollState("hero2", (section, relativeScroll, sectionTop) => {
     switch (section) {
       case 0:
         return {
-          scroll: 0,
+          scroll: relativeScroll(0),
           isSticky: true,
           top: 0,
         };
       case 1:
         return {
-          scroll: relativeScroll(1),
+          scroll: 1,
           isSticky: true,
-          top: 0,
-        };
-      case 2:
-        return {
-          scroll: 2,
-          isSticky: true,
-          top: sectionTop(2),
+          top: sectionTop(1),
         };
       default:
         return {

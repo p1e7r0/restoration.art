@@ -22,7 +22,7 @@ const HomeLandscape = () => {
         };
       default:
         return {
-          scroll: 1,
+          scroll: section < 0 ? 0 : 1,
           isSticky: false,
           top: 0,
         };

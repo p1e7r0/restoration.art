@@ -20,14 +20,12 @@ type SectionsMap = {
 const convertSectionsToState = (sections: Sections) => {
   let sectionsSize = 0;
   const sectionsMap = sections.reduce((map, section, index) => {
-    sectionsSize += section.height;
-
     map[section.key] = { ...section, order: index, height: sectionsSize };
+    sectionsSize += section.height;
 
     return map;
   }, {} as SectionsMap);
 
-  //console.log("file: ScrollProvider.tsx:22 ~ sectionsSize:", sectionsSize);
   return { sectionsMap, sectionsSize };
 };
 
@@ -97,18 +95,22 @@ export function useScrollState<Return>(
 
   const found = sectionsMap[key];
 
-  if (!found) {
-    throw new Error(`Section ${key} not found in sectionsMap keys ${Object.keys(sectionsMap)}`);
-  }
-  console.log(key, found.height);
+  // if (!found) {
+  //   throw new Error(`Section ${key} not found in sectionsMap keys ${Object.keys(sectionsMap)}`);
+  // }
 
   const sectionRate = 1 / sectionsSize;
 
-  const section = Math.floor(scroll / sectionRate);
-  //console.log("file: ScrollProvider.tsx:97 ~ section:", section);
+  const section = Math.floor(scroll / sectionRate) - found.height;
 
-  const relativeScroll = (start: number) => (scroll - sectionRate * start) * (1 / sectionRate);
-  const sectionTop = (start: number) => -(scroll - sectionRate * start) * (1 / sectionRate) * getPageHeight();
+  const relativeScroll = (offset: number) => {
+    const start = offset + found.height;
+    return (scroll - sectionRate * start) * (1 / sectionRate);
+  };
+  const sectionTop = (offset: number) => {
+    const start = offset + found.height;
+    return -(scroll - sectionRate * start) * (1 / sectionRate) * getPageHeight();
+  };
 
   return callback(section, relativeScroll, sectionTop); // relativeScroll, section
 }

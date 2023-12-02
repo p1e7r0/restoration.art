@@ -1,43 +1,31 @@
-import { ImgComparisonSlider } from "@img-comparison-slider/react";
-import { useScrollState } from "../../common/ScrollProvider";
 import "./portfolio.css";
 
-import { useMediaQuery } from "@mui/material";
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
+import { useScrollState } from "../../common/ScrollProvider";
 import afterImage from "./assets/DR_20231114_gruppo extreme_DOPO.jpg";
 import beforeImage from "./assets/DR_20231114_gruppo extreme_PRIMA.jpg";
 
 const Portfolio = () => {
-  const match = useMediaQuery("(max-width: 768px)");
-  const offset = match ? 1 : 0;
-
   const section = useScrollState("portfolio", (section, relativeScroll, sectionTop) => {
-    if (section < 2 + offset) {
-      return {
-        scroll: 0,
-        isSticky: false,
-        top: 0,
-      };
-    }
-    if (section >= 2 + offset && section < 3 + offset) {
-      return {
-        scroll: relativeScroll(2 + offset),
-        isSticky: true,
-        top: 0,
-      };
-    }
-    if (section >= 3 + offset && section < 4 + offset) {
-      return {
-        scroll: 1,
-        isSticky: true,
-        top: sectionTop(3 + offset),
-      };
-    }
-    if (section >= 4 + offset) {
-      return {
-        scroll: 1,
-        isSticky: false,
-        top: 0,
-      };
+    switch (section) {
+      case 0:
+        return {
+          scroll: relativeScroll(0),
+          isSticky: true,
+          top: 0,
+        };
+      case 1:
+        return {
+          scroll: 1,
+          isSticky: true,
+          top: sectionTop(1),
+        };
+      default:
+        return {
+          scroll: section < 0 ? 0 : 1,
+          isSticky: false,
+          top: 0,
+        };
     }
   });
 

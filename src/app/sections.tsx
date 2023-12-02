@@ -7,8 +7,7 @@ import HomePortrait from "../features/hero/HomePortrait";
 import HomePortrait2 from "../features/hero/HomePortrait2";
 import Portfolio from "../features/portfolio/Portfolio";
 import Pricing from "../features/pricing/Pricing";
-import ShowCase1 from "../features/showcase/Showcase1";
-import ShowCase2 from "../features/showcase/Showcase2";
+import ShowCase3 from "../features/showcase/Showcase3";
 
 export const sectionsPortrait: Sections = [
   {
@@ -21,15 +20,20 @@ export const sectionsPortrait: Sections = [
     height: 2,
     element: <HomePortrait2 />,
   },
+  // {
+  //   key: "showcase1",
+  //   height: 2,
+  //   element: <ShowCase1 />,
+  // },
+  // {
+  //   key: "showcase2",
+  //   height: 2,
+  //   element: <ShowCase2 />,
+  // },
   {
-    key: "showcase1",
+    key: "showcase3",
     height: 2,
-    element: <ShowCase1 />,
-  },
-  {
-    key: "showcase2",
-    height: 2,
-    element: <ShowCase2 />,
+    element: <ShowCase3 />,
   },
   {
     key: "pricing",

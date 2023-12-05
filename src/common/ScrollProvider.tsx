@@ -56,6 +56,7 @@ const stateReducer = (state: State, action: Action): State => {
     case "UPDATE_SCROLL_PROGRESS": {
       return { ...state, scroll: action.payload };
     }
+
     case "REGISTER_SECTIONS": {
       return {
         ...state,
@@ -95,9 +96,9 @@ export function useScrollState<Return>(
 
   const found = sectionsMap[key];
 
-  // if (!found) {
-  //   throw new Error(`Section ${key} not found in sectionsMap keys ${Object.keys(sectionsMap)}`);
-  // }
+  if (!found) {
+    throw new Error(`Section ${key} not found in sectionsMap keys ${Object.keys(sectionsMap)}`);
+  }
 
   const sectionRate = 1 / sectionsSize;
 
@@ -113,6 +114,15 @@ export function useScrollState<Return>(
   };
 
   return callback(section, relativeScroll, sectionTop); // relativeScroll, section
+}
+
+// eslint-disable-next-line react-refresh/only-export-components
+export function useScrollState2() {
+  const context = React.useContext(StateContext);
+  if (!context) {
+    throw new Error("useState must be used within the ScrollProvider");
+  }
+  return context;
 }
 
 // eslint-disable-next-line react-refresh/only-export-components

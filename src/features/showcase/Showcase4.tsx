@@ -5,8 +5,8 @@ import { useScrollState } from "../../common/ScrollProvider";
 import afterImage from "./assets/DR_20231114_gruppo extreme_DOPO.jpg";
 import beforeImage from "./assets/DR_20231114_gruppo extreme_PRIMA.jpg";
 
-const Portfolio = () => {
-  const section = useScrollState("portfolio", (section, relativeScroll, sectionTop) => {
+const Showcase4 = () => {
+  const section = useScrollState("showcase4", (section, relativeScroll, sectionTop) => {
     switch (section) {
       case 0:
         return {
@@ -48,4 +48,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Showcase4;

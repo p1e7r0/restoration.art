@@ -23,6 +23,11 @@ html {
   background-color: #000;
 }
 
+.gray {
+  color: rgb(200, 195, 188);
+  background-color: rgb(24, 26, 27);
+}
+
 .container {
   overflow-y: scroll;
   height: 100svh;

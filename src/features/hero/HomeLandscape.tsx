@@ -32,7 +32,7 @@ const HomeLandscape = () => {
   return (
     <>
       <div
-        className="hero-landscape"
+        className="hero-landscape gray"
         style={{
           position: section?.isSticky ? "sticky" : "relative",
           top: section?.top,
@@ -43,7 +43,7 @@ const HomeLandscape = () => {
           <div className="hero-title-wrapper">
             <h1 className="hero-title">Revive Your Memories</h1>
             <p className="hero-subtitle">Preserving the Past, Enhancing the Present</p>
-            <a href="#" className="hero-button">
+            <a href="#contacts" className="hero-button">
               Get Started
             </a>
           </div>

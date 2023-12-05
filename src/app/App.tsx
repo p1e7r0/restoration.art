@@ -3,7 +3,7 @@ import "./App.css";
 import { useMediaQuery } from "@mui/material";
 import { ScrollProvider } from "../common/ScrollProvider";
 import Scrollable from "../common/Scrollable";
-import sectionsPortrait, { sectionsLandscape } from "./sections";
+import { sectionsLandscape, sectionsPortrait } from "./sections";
 
 function App() {
   const match = useMediaQuery("(max-width: 768px)");

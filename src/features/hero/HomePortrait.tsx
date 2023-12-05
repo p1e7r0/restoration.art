@@ -6,7 +6,7 @@ const HomePortrait = () => {
       <div className="hero-title-wrapper">
         <h1 className="hero-title">Revive Your Memories</h1>
         <p className="hero-subtitle">Preserving the Past, Enhancing the Present</p>
-        <a href="#" className="hero-button">
+        <a href="#contacts" className="hero-button">
           Get Started
         </a>
       </div>

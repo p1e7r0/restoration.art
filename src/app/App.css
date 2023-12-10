@@ -29,7 +29,8 @@ html {
 }
 
 .container {
-  overflow-y: scroll;
+  overflow: auto;
+  -webkit-overflow-scrolling: auto;
   height: 100svh;
 }
 

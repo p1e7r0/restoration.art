@@ -1,4 +1,4 @@
-import "./hero.css";
+import "./Hero.css";
 
 import { useMediaQuery } from "@mui/material";
 import HeroPortrait from "./HeroPortrait";

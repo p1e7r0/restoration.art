@@ -1,5 +1,3 @@
-import "./hero.css";
-
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
 import after from "./assets/20231103_Portfolio_ragazzo_square_DOPO.jpg";
 import before from "./assets/20231103_Portfolio_ragazzo_square_PRIMA.jpg";

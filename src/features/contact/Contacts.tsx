@@ -44,7 +44,7 @@ const Contacts = () => {
           <input id="second-name" type="text" placeholder="Last Name" />
           <input id="email" type="email" placeholder="Email" />
           <input id="telephone" type="tel" placeholder="Phone" />
-          <select id="service" placeholder="Service">
+          <select id="service">
             <option value="empty"></option>
             <option value="digitalization">Digitalization</option>
             <option value="enhancing">Enhancing</option>

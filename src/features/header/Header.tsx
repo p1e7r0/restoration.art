@@ -1,43 +1,25 @@
-import { styled } from "@mui/material";
-
-const Root = styled("div")`
-  width: 100vw;
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-`;
-
-const Links = styled("div")`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 8px;
-  margin-right: 16px;
-`;
-
-const Logo = styled("div")`
-  margin-left: 16px;
-`;
-
-const Space = styled("div")`
-  flex: 1;
-`;
+import "./Header.css";
 
 const Header = () => {
   return (
-    <Root>
-      <Logo>Logo</Logo>
-      <Space />
-      <Links>
-        <div>Home</div>
-        <div>Services</div>
-        <div>Portfolio</div>
-        <div>Contact</div>
-      </Links>
-    </Root>
+    <header>
+      <div className="navbar">
+        <div className="logo">DR</div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#pricing">Pricing</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 };
 

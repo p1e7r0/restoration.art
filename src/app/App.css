@@ -1,56 +1,6 @@
-#root {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100svh;
-  width: 100vw;
-}
-
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100svh;
-  overflow: hidden;
-}
-
-.white {
-  color: #000;
-  background-color: #fff;
-}
-
-.black {
-  color: #fff;
-  background-color: #000;
-}
-
-.gray {
-  color: rgb(200, 195, 188);
-  background-color: rgb(24, 26, 27);
-}
-
-.container {
-  overflow: auto;
-  -webkit-overflow-scrolling: auto;
-  height: 100svh;
-}
-
-section {
-  width: 100%; /* Imposta la larghezza desiderata del contenitore */
-  height: 100svh; /* Imposta l'altezza desiderata del contenitore */
-  overflow: hidden; /* Nasconde eventuali parti in eccesso dell'immagine */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.comparator {
-  width: 100%; /* Imposta la larghezza desiderata del contenitore */
-  height: 100svh; /* Imposta l'altezza desiderata del contenitore */
-  overflow: hidden; /* Nasconde eventuali parti in eccesso dell'immagine */
-  --divider-width: 4px;
-  --divider-color: #fff;
-  --default-handle-opacity: 0;
-  --default-border-width: 0;
-  outline: unset;
+  box-sizing: border-box;
 }

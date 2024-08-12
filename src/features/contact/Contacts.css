@@ -1,0 +1,106 @@
+.contact {
+  padding: 50px 20px;
+  background-color: #0f0f0f;
+  color: #fefefe;
+  text-align: center;
+}
+
+.contact h2 {
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-grid {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.contact-links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-link {
+  width: 264px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.contact-grid p {
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+.contact-links div a {
+  color: #fefefe;
+  text-decoration: none;
+}
+
+.fa-envelope {
+  color: #555;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "firstName secondName" "email tel" "service service" "message message" "submit submit";
+  gap: 20px;
+}
+
+.contact-form input {
+  padding: 10px;
+}
+
+#first-name {
+  grid-area: firstName;
+}
+
+#second-name {
+  grid-area: secondName;
+}
+
+#email {
+  grid-area: email;
+}
+
+#telephone {
+  grid-area: tel;
+}
+
+.contact-form textarea {
+  grid-area: message;
+  padding: 10px;
+}
+
+#service {
+  grid-area: service;
+}
+
+#submit {
+  grid-area: submit;
+}

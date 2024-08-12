@@ -9,14 +9,11 @@
   background-color: #fff;
 }
 
-.hero-portrait {
-  width: 100%;
-  height: 100svh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100svh 100svh;
-  color: #333;
-  background-color: #fff;
+@media screen and (max-width: 600px) {
+  .hero-landscape {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 .hero-column-1 {
@@ -99,4 +96,10 @@
 div#first.first.vertical.focused {
   outline: none;
   will-change: unset;
+}
+
+.placeholder-section {
+  width: 100%;
+  height: calc(100vh - 39px);
+  background-color: #f5f5f5;
 }

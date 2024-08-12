@@ -1,0 +1,39 @@
+.portfolio {
+  background-color: #0f0f0f;
+  color: #fefefe;
+  text-align: center;
+  width: 100vw;
+}
+
+.portfolio h2 {
+  margin: 0;
+  padding: 64px;
+}
+
+.portfolio-grid {
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  gap: 64px;
+  overflow: auto;
+}
+
+.portfolio-item {
+  width: 100%;
+  display: flex;
+}
+
+.portfolio-item img {
+  width: auto;
+  height: 700px;
+}
+
+.image-before {
+  object-fit: cover;
+}
+
+.image-after {
+  object-fit: cover;
+}

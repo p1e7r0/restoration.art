@@ -1,18 +1,19 @@
+import Contacts from "../features/contact/Contacts";
+import Header from "../features/header/Header";
+import Hero from "../features/hero/Hero";
+import Portfolio from "../features/portfolio/Portfolio";
+import Pricing from "../features/pricing/Pricing";
 import "./App.css";
 
-import { useMediaQuery } from "@mui/material";
-import { ScrollProvider } from "../common/ScrollProvider";
-import Scrollable from "../common/Scrollable";
-import { sectionsLandscape, sectionsPortrait } from "./sections";
-
 function App() {
-  const match = useMediaQuery("(max-width: 768px)");
-  const sections = match ? sectionsPortrait : sectionsLandscape;
-
   return (
-    <ScrollProvider sections={sections} key={`${match}`}>
-      <Scrollable sections={sections} />
-    </ScrollProvider>
+    <div>
+      <Header />
+      <Hero />
+      <Portfolio />
+      <Pricing />
+      <Contacts />
+    </div>
   );
 }
 

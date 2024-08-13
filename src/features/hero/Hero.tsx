@@ -14,11 +14,11 @@ const Hero = () => {
 
     const originalScrollPercent = window.scrollY / window.innerHeight;
     if (originalScrollPercent <= 1) {
-      beforeImage.style.height = `${100 - originalScrollPercent * 100}vh`;
+      beforeImage.style.height = `${100 - originalScrollPercent * 100}100svh`;
       imagesContainer.style.position = "fixed";
       imagesContainer.style.top = "0";
     } else {
-      beforeImage.style.height = `0vh`;
+      beforeImage.style.height = `0svh`;
       imagesContainer.style.position = "absolute";
       imagesContainer.style.top = "100%";
     }
@@ -34,7 +34,7 @@ const Hero = () => {
       const scrollPercent = scrollPosition / maxScroll;
 
       // // Imposta l'altezza della parte visibile dell'immagine "after"
-      beforeImage.style.height = `${100 - scrollPercent * 100}vh`;
+      beforeImage.style.height = `${100 - scrollPercent * 100}svh`;
       if (scrollPercent < 1) {
         imagesContainer.style.position = "fixed";
         imagesContainer.style.top = "0";

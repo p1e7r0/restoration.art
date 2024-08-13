@@ -1,105 +1,70 @@
-/* Hero Section Styles */
-.hero-landscape {
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 400vh; /* Aumenta l'altezza del corpo per permettere lo scroll */
+}
+
+#root {
+  height: 100vh;
+}
+
+.hero {
+  height: 100%;
   width: 100%;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  color: #333;
-  background-color: #fff;
 }
 
-@media screen and (max-width: 600px) {
-  .hero-landscape {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-
-.hero-column-1 {
-  height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.hero-title-wrapper {
-  margin: 48px;
-}
-
-/* .hero-title {
-  font-size: 4rem;
-  font-size: 5.4vw;
-  margin-bottom: 32px;
-} */
-
-.hero-title {
-  font-size: calc(1.675rem + 5.1vw);
-  font-weight: 600;
-  line-height: 1.15;
-  margin-bottom: 32px;
-}
-@media (min-width: 1600px) {
-  .hero-title {
-    font-size: 109px;
-  }
-}
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 70px;
-  }
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 48px;
-}
-
-.hero-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  text-decoration: none;
-  color: #fff;
-  background-color: #333; /* Button color, adjust as needed */
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: #555; /* Adjust hover color as needed */
-  color: #fff;
-}
-
-/* COLUMN 2 */
-
-.hero-column-2 {
-  height: 100svh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image {
+.image-container {
+  position: fixed;
+  height: 100vh;
   width: 100%;
-  height: 100svh;
+  top: 0;
+  left: 0;
+}
+
+.before-image img,
+.after-image img {
+  width: 100%;
+  height: 100vh;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.hero-image-to-compare {
-  width: 100%; /* Larghezza al 100% del contenitore */
-  height: 100svh; /* Altezza al 100% del contenitore */
-  object-fit: cover; /* Fai in modo che l'immagine copra sempre tutto il contenitore */
-}
-
-div#first.first.vertical.focused {
-  outline: none;
-  will-change: unset;
-}
-
-.placeholder-section {
+.before-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
   width: 100%;
-  height: calc(100vh - 39px);
-  background-color: #f5f5f5;
+  overflow: hidden;
+  z-index: 2;
+  border-bottom: 2px solid #fff;
+}
+
+.after-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
+.empty {
+  height: 200vh;
+}
+
+.text {
+  position: relative;
+  color: black;
+  background-color: tomato;
+}
+
+.text h1 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
 }

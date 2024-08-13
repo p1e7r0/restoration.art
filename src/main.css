@@ -10,14 +10,3 @@ html {
   margin: 0;
   padding: 0;
 }
-
-.comparator {
-  width: 100%; /* Imposta la larghezza desiderata del contenitore */
-  height: 100svh; /* Imposta l'altezza desiderata del contenitore */
-  overflow: hidden; /* Nasconde eventuali parti in eccesso dell'immagine */
-  --divider-width: 4px;
-  --divider-color: #fff;
-  --default-handle-opacity: 0;
-  --default-border-width: 0;
-  outline: unset;
-}

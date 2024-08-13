@@ -20,7 +20,7 @@ const Hero = () => {
     } else {
       beforeImage.style.height = `0svh`;
       imagesContainer.style.position = "absolute";
-      imagesContainer.style.top = "100%";
+      imagesContainer.style.top = "100svh";
     }
 
     const handleScroll = () => {
@@ -40,7 +40,7 @@ const Hero = () => {
         imagesContainer.style.top = "0";
       } else {
         imagesContainer.style.position = "absolute";
-        imagesContainer.style.top = "100%";
+        imagesContainer.style.top = "100svh";
       }
     };
 

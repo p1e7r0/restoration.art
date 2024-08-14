@@ -14,33 +14,25 @@ const Hero = () => {
 
     const originalScrollPercent = window.scrollY / window.innerHeight;
     if (originalScrollPercent <= 1) {
-      beforeImage.style.height = `${100 - originalScrollPercent * 100}100svh`;
+      beforeImage.style.height = `${100 - originalScrollPercent * 100}vh`;
       imagesContainer.style.position = "fixed";
       imagesContainer.style.top = "0";
     } else {
       beforeImage.style.height = `0svh`;
       imagesContainer.style.position = "absolute";
-      imagesContainer.style.top = "100svh";
+      imagesContainer.style.top = "100vh";
     }
 
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
+      const scrollPercent = window.scrollY / window.innerHeight;
 
-      // // Calcola quanto scroll è necessario per rivelare completamente l'immagine "after"
-      const maxScroll = windowHeight;
-
-      // // Calcola la percentuale dello scroll
-      const scrollPercent = scrollPosition / maxScroll;
-
-      // // Imposta l'altezza della parte visibile dell'immagine "after"
       beforeImage.style.height = `${100 - scrollPercent * 100}svh`;
       if (scrollPercent < 1) {
         imagesContainer.style.position = "fixed";
         imagesContainer.style.top = "0";
       } else {
         imagesContainer.style.position = "absolute";
-        imagesContainer.style.top = "100svh";
+        imagesContainer.style.top = "100vh";
       }
     };
 
@@ -54,10 +46,10 @@ const Hero = () => {
     <div className="hero">
       <div ref={imagesContainerRef} className="image-container">
         <div ref={beforeImageRef} className="before-image">
-          <img src={before} alt="Before Image" />
+          <img src={before} alt="Before" />
         </div>
         <div className="after-image">
-          <img src={after} alt="After Image" />
+          <img src={after} alt="After" />
         </div>
       </div>
       <div className="empty"></div>

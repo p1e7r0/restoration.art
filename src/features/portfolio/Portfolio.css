@@ -5,7 +5,7 @@
   width: 100vw;
 }
 
-.portfolio h2 {
+.portfolio h1 {
   margin: 0;
   padding: 64px;
 }
@@ -25,14 +25,15 @@
 }
 
 .portfolio-item img {
+  height: 80vh;
   width: auto;
-  height: 700px;
+  max-width: 50vw;
 }
 
 .image-before {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .image-after {
-  object-fit: cover;
+  object-fit: contain;
 }

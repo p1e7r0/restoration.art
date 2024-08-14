@@ -1,12 +1,12 @@
 import "./Portfolio.css";
 
-import before1 from "../showcase/assets/img20220704_14330085_NONNO_GIUSEPPE_REST_DOPO.jpg";
-import after1 from "../showcase/assets/img20220704_14330085_NONNO_GIUSEPPE_REST_PRIMA.jpg";
+import after1 from "../showcase/assets/img20220704_14330085_NONNO_GIUSEPPE_REST_DOPO.jpg";
+import before1 from "../showcase/assets/img20220704_14330085_NONNO_GIUSEPPE_REST_PRIMA.jpg";
 
 const Portfolio = () => {
   return (
     <section className="portfolio" id="portfolio">
-      <h2>Portfolio</h2>
+      <h1>Portfolio</h1>
       <div className="portfolio-grid">
         <div className="portfolio-item">
           <img className="image-before" src={before1} alt="Before" />

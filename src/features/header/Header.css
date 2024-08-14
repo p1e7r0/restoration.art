@@ -1,15 +1,27 @@
 header {
+  position: fixed;
+  top: 0;
   background-color: #f8f8f8;
-  padding: 10px 0;
   border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
   width: 100%;
+  z-index: 4;
+  gap: 16px;
+}
+
+header .logo {
+  font-weight: bold;
+  margin-left: 16px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  margin-right: 16px;
 }
 
 .logo {

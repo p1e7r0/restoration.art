@@ -12,29 +12,21 @@ const Hero = () => {
     const imagesContainer = imagesContainerRef.current;
     if (!beforeImage || !imagesContainer) return;
 
-    const originalScrollPercent = window.scrollY / window.innerHeight;
-    if (originalScrollPercent <= 1) {
-      beforeImage.style.height = `${100 - originalScrollPercent * 100}vh`;
-      imagesContainer.style.position = "fixed";
-      imagesContainer.style.top = "0";
-    } else {
-      beforeImage.style.height = `0svh`;
-      imagesContainer.style.position = "absolute";
-      imagesContainer.style.top = "100vh";
-    }
-
     const handleScroll = () => {
       const scrollPercent = window.scrollY / window.innerHeight;
 
-      beforeImage.style.height = `${100 - scrollPercent * 100}svh`;
       if (scrollPercent < 1) {
+        beforeImage.style.height = `${100 - scrollPercent * 100}vh`;
         imagesContainer.style.position = "fixed";
-        imagesContainer.style.top = "0";
+        imagesContainer.style.top = "40px";
       } else {
+        beforeImage.style.height = `0`;
         imagesContainer.style.position = "absolute";
-        imagesContainer.style.top = "100vh";
+        imagesContainer.style.top = "calc(100vh + 40px)";
       }
     };
+
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -52,15 +44,7 @@ const Hero = () => {
           <img src={after} alt="After" />
         </div>
       </div>
-      <div className="empty"></div>
-      <div className="text">
-        <h1>Before & After</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et pellentesque odio. Donec id quam in ex tincidunt lacinia. Nullam facilisis, risus ac tincidunt fermentum,
-          libero enim tincidunt nunc, eget suscipit nisl nunc ac nunc. Donec id quam in ex tincidunt lacinia. Nullam facilisis, risus ac tincidunt fermentum, libero enim tincidunt
-          nunc, eget suscipit nisl nunc ac nunc.
-        </p>
-      </div>
+      <div className="placeholder" />
     </div>
   );
 };

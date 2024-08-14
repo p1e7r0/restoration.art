@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Hero from "./features/hero/Hero.tsx";
+import App from "./app/App.tsx";
 import "./main.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Hero />
+    <App />
   </React.StrictMode>
 );

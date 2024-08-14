@@ -3,8 +3,8 @@ import "./Header.css";
 const Header = () => {
   return (
     <header>
+      <div className="logo">DR</div>
       <div className="navbar">
-        <div className="logo">DR</div>
         <nav>
           <ul>
             <li>

@@ -54,3 +54,20 @@
 .placeholder {
   height: 200vh;
 }
+
+@media screen and (max-width: 600px) {
+  .hero-title {
+    width: 100%;
+  }
+  .before-image {
+    left: 0;
+    width: 100vw;
+  }
+  .after-image {
+    left: 0;
+    width: 100vw;
+  }
+  .placeholder {
+    height: calc(200vh - 80px);
+  }
+}

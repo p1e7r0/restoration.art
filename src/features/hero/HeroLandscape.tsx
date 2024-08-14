@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import "./HeroLandscape.css";
 import after from "./assets/20231103_Portfolio_ragazzo_square_DOPO.jpg";
 import before from "./assets/20231103_Portfolio_ragazzo_square_PRIMA.jpg";
 

@@ -4,11 +4,6 @@
   text-align: center;
 }
 
-.pricing h2 {
-  margin: 0;
-  margin-bottom: 64px;
-}
-
 .card-container {
   display: flex;
   justify-content: center;

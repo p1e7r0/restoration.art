@@ -5,8 +5,9 @@ import before1 from "../showcase/assets/img20220704_14330085_NONNO_GIUSEPPE_REST
 
 const Portfolio = () => {
   return (
-    <section className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+    <section className="py-16 px-0 md:px-8 bg-black flex flex-col items-center gap-16" id="portfolio">
+      <h2 className="text-3xl font-extrabold text-center text-gray-50 dark:text-white sm:text-4xl">Portfolio</h2>
+
       <div className="portfolio-grid">
         <div className="portfolio-item">
           <img className="image-before" src={before1} alt="Before" />

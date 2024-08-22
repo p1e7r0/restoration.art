@@ -1,13 +1,9 @@
 .portfolio {
+  height: 100%;
   background-color: #0f0f0f;
   color: #fefefe;
   text-align: center;
   width: 100vw;
-}
-
-.portfolio h1 {
-  margin: 0;
-  padding: 64px;
 }
 
 .portfolio-grid {
@@ -27,7 +23,7 @@
 .portfolio-item img {
   height: 80vh;
   width: auto;
-  max-width: 50vw;
+  max-width: 100vw;
 }
 
 .image-before {

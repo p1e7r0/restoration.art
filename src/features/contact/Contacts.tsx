@@ -5,7 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Contacts = () => {
   return (
-    <section className="py-16 px-0 md:px-8 bg-black text-gray-50 flex flex-col items-center gap-16" id="contact">
+    <section className="pb-8 py-16 px-4 md:px-8 bg-black text-gray-50 flex flex-col items-center gap-16" id="contact">
       <div className="max-w-screen-xl mx-auto">
         <h2 className="text-3xl font-extrabold text-center dark:text-white sm:text-4xl">Contact</h2>
         <div className="contact-grid mt-10">

@@ -80,7 +80,7 @@ const Pricing = () => {
   return (
     <section className="py-16 px-0 md:px-8 bg-white flex flex-col items-center" id="pricing">
       <h2 className="text-3xl font-extrabold text-center text-gray-900 dark:text-white sm:text-4xl">Pricing</h2>
-      <div className="pricing space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 max-w-6xl" id="pricing">
+      <div className="pricing space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 max-w-screen-xl mx-auto">
         {pricingData.map((item) => (
           <div
             key={`pricing-${item.title}-card`}

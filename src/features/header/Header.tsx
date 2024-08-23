@@ -17,7 +17,7 @@ const Header = () => {
               <li key={section.name}>
                 <a
                   href={section.link}
-                  className="block py-2 text-gray-900  hover:bg-gray-100 hover:bg-transparent hover:text-blue-700 p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-blue-500 dark:hover:bg-transparent dark:border-gray-700"
+                  className="block py-2 text-gray-900  hover:bg-gray-100 hover:bg-transparent hover:text-primary-700 p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-primary-500 dark:hover:bg-transparent dark:border-gray-700"
                   aria-current="page"
                 >
                   {section.name}
